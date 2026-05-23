@@ -3,7 +3,7 @@ Configuring and analyzing Windows endpoint telemetry using Microsoft Sysmon.
 # Sysmon Telemetry Configuration & Analysis
 
 ###  Objective
-Deploy advanced Windows system logging to capture process creation and network connections, mimicking an enterprise SOC environment. 
+Deploy advanced Windows system logging to capture process creation and network connections, replicating endpoint telemetry collection used in SOC environments. 
 
 ###  Tools Used
 * **Microsoft Sysmon:** System Monitor for advanced endpoint telemetry.
@@ -14,8 +14,7 @@ Deploy advanced Windows system logging to capture process creation and network c
 1. Installed Sysmon64 using the SwiftOnSecurity ruleset via elevated PowerShell.
 2. Generated test telemetry by executing standard networking commands (`ping`).
 3. Navigated to `Microsoft-Windows-Sysmon/Operational` in Event Viewer.
-4. Successfully isolated **Event ID 1 (Process Create)**, identifying the specific Process ID (PID), executable path, and command line arguments used during the test.
-
+4. Identified **Event ID 1** (Process Create) capturing the PID, executable path, and command line arguments for the ping process.
 ###  Action Demonstration
 <img width="1777" height="1060" alt="sysmon-demo" src="https://github.com/user-attachments/assets/0f133c8d-dd18-40e7-9edd-bad33cc6ca4a" />
 
